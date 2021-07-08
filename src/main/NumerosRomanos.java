@@ -3,29 +3,29 @@ package main;
 public class NumerosRomanos {
 
     public String naturalAromano(int numeroNatural){
-
-        if (numeroNatural <= 3) return sumarI(numeroNatural);
-
         switch (numeroNatural){
             case 4: return "IV";
-            case 5: return "V";
-            case 6: return "VI";
-            case 7: return "VII";
-            case 8: return "VIII";
+            case 9: return "IX";
         }
+
+        if (numeroNatural <= 3) return sumarI(1, numeroNatural, "");
+
+        if (numeroNatural <= 8) return sumarI(6, numeroNatural, "V");
+
         return null;
     }
 
     /**
-     * Simplificar casos bases, concatenando hasta los 3 primeros "I"
-     * @param numeroNatural entero natural a transformar
-     * @return numero romano
+     * Refactor para sumar "I" a partir de valores inferiores superiores
+     * @param inicio valor desde donde comenzar
+     * @param numeroNatural valor a alcanzar
+     * @param numeroRomano resultado en romano donde concatenar
+     * @return numeroRomano
      */
-    private String sumarI(int numeroNatural) {
-        String resultado = "";
-        for (int i = 1; i <= numeroNatural; i++) {
-            resultado+="I";
+    private String sumarI(int inicio, int numeroNatural, String numeroRomano) {
+        for (int i = inicio; i <= numeroNatural; i++) {
+            numeroRomano+="I";
         }
-        return resultado;
+        return numeroRomano;
     }
 }
