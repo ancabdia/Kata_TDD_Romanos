@@ -9,6 +9,9 @@ public class NumerosRomanos {
         switch (numeroNatural){
             case 4: return "IV";
             case 5: return "V";
+            case 6: return "VI";
+            case 7: return "VII";
+            case 8: return "VIII";
         }
         return null;
     }

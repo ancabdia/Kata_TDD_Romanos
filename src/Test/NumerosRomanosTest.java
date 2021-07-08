@@ -42,10 +42,38 @@ class NumerosRomanosTest {
         assertEquals(romano, "V");
     }
 
+    @org.junit.jupiter.api.Test
+    void pasar6Aromanos() {
+        String romano = numerosRomanos.naturalAromano(6);
+
+        assertEquals(romano, "VI");
+    }
+
+    @org.junit.jupiter.api.Test
+    void pasar7Aromanos() {
+        String romano = numerosRomanos.naturalAromano(7);
+
+        assertEquals(romano, "VII");
+    }
+
+    @org.junit.jupiter.api.Test
+    void pasar8Aromanos() {
+        String romano = numerosRomanos.naturalAromano(8);
+
+        assertEquals(romano, "VIII");
+    }
+
 //    @org.junit.jupiter.api.Test
-//    void pasar6Aromanos() {
-//        String romano = numerosRomanos.naturalAromano(6);
+//    void pasar9Aromanos() {
+//        String romano = numerosRomanos.naturalAromano(9);
 //
-//        assertEquals(romano, "VI");
+//        assertEquals(romano, "IX");
+//    }
+//
+//    @org.junit.jupiter.api.Test
+//    void pasar10Aromanos() {
+//        String romano = numerosRomanos.naturalAromano(10);
+//
+//        assertEquals(romano, "X");
 //    }
 }
