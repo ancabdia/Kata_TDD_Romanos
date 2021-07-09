@@ -20,6 +20,13 @@ public class NumerosRomanos {
         switch (decena){
             case 1: return "X";
             case 2: return "XX";
+            case 3: return "XXX";
+            case 4: return "XL";
+            case 5: return "L";
+            case 6: return "LX";
+            case 7: return "LXX";
+            case 8: return "LXXX";
+            case 9: return "XC";
         }
         return null;
     }

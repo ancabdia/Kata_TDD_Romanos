@@ -112,5 +112,31 @@ class NumerosRomanosTest {
         assertEquals(romano, "XV");
     }
 
+    @org.junit.jupiter.api.Test
+    void pasar30Aromanos() {
+        String romano = numerosRomanos.naturalAromano(30);
 
+        assertEquals(romano, "XXX");
+    }
+
+    @org.junit.jupiter.api.Test
+    void pasar34Aromanos() {
+        String romano = numerosRomanos.naturalAromano(34);
+
+        assertEquals(romano, "XXXIV");
+    }
+
+    @org.junit.jupiter.api.Test
+    void pasar42Aromanos() {
+        String romano = numerosRomanos.naturalAromano(42);
+
+        assertEquals(romano, "XLII");
+    }
+
+    @org.junit.jupiter.api.Test
+    void pasar50Aromanos() {
+        String romano = numerosRomanos.naturalAromano(50);
+
+        assertEquals(romano, "L");
+    }
 }
