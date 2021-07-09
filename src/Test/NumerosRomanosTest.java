@@ -63,17 +63,54 @@ class NumerosRomanosTest {
         assertEquals(romano, "VIII");
     }
 
-//    @org.junit.jupiter.api.Test
-//    void pasar9Aromanos() {
-//        String romano = numerosRomanos.naturalAromano(9);
-//
-//        assertEquals(romano, "IX");
-//    }
-//
-//    @org.junit.jupiter.api.Test
-//    void pasar10Aromanos() {
-//        String romano = numerosRomanos.naturalAromano(10);
-//
-//        assertEquals(romano, "X");
-//    }
+    @org.junit.jupiter.api.Test
+    void pasar9Aromanos() {
+        String romano = numerosRomanos.naturalAromano(9);
+
+        assertEquals(romano, "IX");
+    }
+
+    @org.junit.jupiter.api.Test
+    void pasar10Aromanos() {
+        String romano = numerosRomanos.naturalAromano(10);
+
+        assertEquals(romano, "X");
+    }
+
+    @org.junit.jupiter.api.Test
+    void pasar11Aromanos() {
+        String romano = numerosRomanos.naturalAromano(11);
+
+        assertEquals(romano, "XI");
+    }
+
+    @org.junit.jupiter.api.Test
+    void pasar12Aromanos() {
+        String romano = numerosRomanos.naturalAromano(12);
+
+        assertEquals(romano, "XII");
+    }
+
+    @org.junit.jupiter.api.Test
+    void pasar13Aromanos() {
+        String romano = numerosRomanos.naturalAromano(13);
+
+        assertEquals(romano, "XIII");
+    }
+
+    @org.junit.jupiter.api.Test
+    void pasar14Aromanos() {
+        String romano = numerosRomanos.naturalAromano(14);
+
+        assertEquals(romano, "XIV");
+    }
+
+    @org.junit.jupiter.api.Test
+    void pasar15Aromanos() {
+        String romano = numerosRomanos.naturalAromano(15);
+
+        assertEquals(romano, "XV");
+    }
+
+
 }

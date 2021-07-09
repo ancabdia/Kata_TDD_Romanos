@@ -2,15 +2,38 @@ package main;
 
 public class NumerosRomanos {
 
-    public String naturalAromano(int numeroNatural){
-        switch (numeroNatural){
+    public String naturalAromano(Integer numeroNatural){
+
+        char[] numerosChar = numeroNatural.toString().toCharArray(); //almacenar en []
+
+        if(numerosChar.length >= 2){ //separar unidades mayor a 1
+            String unidadRomana =  pasarUnidad(Integer.parseInt(String.valueOf(numerosChar[1])));
+            String decenaRomana = pasarDecena(Integer.parseInt(String.valueOf(numerosChar[0])));
+
+            return decenaRomana+unidadRomana;
+        }else{
+            return pasarUnidad(Integer.parseInt(String.valueOf(numerosChar[0])));
+        }
+    }
+
+    private String pasarDecena(int decena) {
+        switch (decena){
+            case 1: return "X";
+            case 2: return "XX";
+        }
+        return null;
+    }
+
+    private String pasarUnidad(int unidad) {
+        switch (unidad){
             case 4: return "IV";
             case 9: return "IX";
         }
 
-        if (numeroNatural <= 3) return sumarI(1, numeroNatural, "");
+        if (unidad <= 3) return sumarI(1, unidad, "");
 
-        if (numeroNatural <= 8) return sumarI(6, numeroNatural, "V");
+        if (unidad <= 8) return sumarI(6, unidad, "V");
+
 
         return null;
     }
