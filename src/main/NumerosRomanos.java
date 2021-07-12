@@ -1,6 +1,11 @@
 package main;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class NumerosRomanos {
+
+    private final static List<String> simbolosRomanos = Arrays.asList("I","V","X","L","C");
 
     public String naturalAromano(Integer numeroNatural){
 
@@ -18,13 +23,13 @@ public class NumerosRomanos {
 
     private String pasarDecena(int decena) {
         switch (decena){
-            case 4: return "XL";
-            case 9: return "XC";
+            case 4: return simbolosRomanos.get(2) + simbolosRomanos.get(3);
+            case 9: return simbolosRomanos.get(2) + simbolosRomanos.get(4);
         }
 
-        if (decena <= 3) return sumar(1, decena, "", "X");
+        if (decena <= 3) return sumar(1, decena, "", simbolosRomanos.get(2));
 
-        if (decena <= 8) return sumar(6, decena, "L", "X");
+        if (decena <= 8) return sumar(6, decena, simbolosRomanos.get(3), simbolosRomanos.get(2));
 
 
         return null;
@@ -32,13 +37,13 @@ public class NumerosRomanos {
 
     private String pasarUnidad(int unidad) {
         switch (unidad){
-            case 4: return "IV";
-            case 9: return "IX";
+            case 4: return simbolosRomanos.get(0) + simbolosRomanos.get(1);
+            case 9: return simbolosRomanos.get(0) + simbolosRomanos.get(2);
         }
 
-        if (unidad <= 3) return sumar(1, unidad, "", "I");
+        if (unidad <= 3) return sumar(1, unidad, "", simbolosRomanos.get(0));
 
-        if (unidad <= 8) return sumar(6, unidad, "V", "I");
+        if (unidad <= 8) return sumar(6, unidad, simbolosRomanos.get(1), simbolosRomanos.get(0));
 
 
         return null;
