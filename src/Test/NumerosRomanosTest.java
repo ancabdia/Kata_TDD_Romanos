@@ -21,6 +21,21 @@ class NumerosRomanosTest {
         assertEquals(romano, romano);
     }
 
+
+    /**
+     * Test random para evitar generar toda la bateria de cada caso
+     * Genera numero random entre 100 y 900
+     * Devuelve un sout() con el numero generado y si el test ha pasado.
+     */
+    @org.junit.jupiter.api.Test
+    void pasarRandomEntre100Y900Aromanos() {
+        int random = (int) (Math.random() * (900-100) + 100);
+        String romano = numerosRomanos.naturalAromano(random);
+
+        System.out.println("El numero aleatorio es: " + random + " ha devuelto: " + romano);
+        assertEquals(romano, romano);
+    }
+
     @org.junit.jupiter.api.Test
     void pasar1Aromanos() {
         String romano = numerosRomanos.naturalAromano(1);

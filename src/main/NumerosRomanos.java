@@ -5,7 +5,7 @@ import java.util.List;
 
 public class NumerosRomanos {
 
-    private final static List<String> simbolosRomanos = Arrays.asList("I","V","X","L","C");
+    private final static List<String> simbolosRomanos = Arrays.asList("I","V","X","L","C","D","M");
 
     public String naturalAromano(Integer numeroNatural){
 
