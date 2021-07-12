@@ -22,9 +22,9 @@ public class NumerosRomanos {
             case 9: return "XC";
         }
 
-        if (decena <= 3) return sumarX(1, decena, "");
+        if (decena <= 3) return sumar(1, decena, "", "X");
 
-        if (decena <= 8) return sumarX(6, decena, "L");
+        if (decena <= 8) return sumar(6, decena, "L", "X");
 
 
         return null;
@@ -36,31 +36,17 @@ public class NumerosRomanos {
             case 9: return "IX";
         }
 
-        if (unidad <= 3) return sumarI(1, unidad, "");
+        if (unidad <= 3) return sumar(1, unidad, "", "I");
 
-        if (unidad <= 8) return sumarI(6, unidad, "V");
+        if (unidad <= 8) return sumar(6, unidad, "V", "I");
 
 
         return null;
     }
 
-    /**
-     * Refactor para sumar "I" a partir de valores inferiores superiores
-     * @param inicio valor desde donde comenzar
-     * @param numeroNatural valor a alcanzar
-     * @param numeroRomano resultado en romano donde concatenar
-     * @return numeroRomano
-     */
-    private String sumarI(int inicio, int numeroNatural, String numeroRomano) {
+    private String sumar(int inicio, int numeroNatural, String numeroRomano, String incRomano) {
         for (int i = inicio; i <= numeroNatural; i++) {
-            numeroRomano+="I";
-        }
-        return numeroRomano;
-    }
-
-    private String sumarX(int inicio, int numeroNatural, String numeroRomano) {
-        for (int i = inicio; i <= numeroNatural; i++) {
-            numeroRomano+="X";
+            numeroRomano+= incRomano;
         }
         return numeroRomano;
     }
