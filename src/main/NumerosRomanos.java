@@ -11,14 +11,16 @@ public class NumerosRomanos {
 
         char[] numerosChar = numeroNatural.toString().toCharArray(); //almacenar en []
 
-        if(numerosChar.length >= 2){ //separar unidades mayor a 1
-            String unidadRomana =  pasarUnidades(Integer.parseInt(String.valueOf(numerosChar[1])), 0, 1, 2);
-            String decenaRomana = pasarUnidades(Integer.parseInt(String.valueOf(numerosChar[0])), 2, 3 ,4);
+        int inc = 0;
+        String resultado = "";
+        for (int i = numerosChar.length - 1; i >= 0 ; i--) {
+            String romano =  pasarUnidades(Integer.parseInt(String.valueOf(numerosChar[i])), 0+inc, 1+inc, 2+inc);
 
-            return decenaRomana+unidadRomana;
-        }else{
-            return pasarUnidades(Integer.parseInt(String.valueOf(numerosChar[0])),0, 1,2);
+            resultado = romano + resultado;
+            inc += 2;
         }
+
+        return resultado;
     }
 
     private String pasarUnidades(int decena, int x, int y, int z) {
